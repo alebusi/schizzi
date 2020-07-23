@@ -1,0 +1,31 @@
+body {
+  background-color: #8F8F8F;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10+ and Edge */
+  user-select: none; /* Standard syntax */
+}
+
+#testo {
+  font-size: 120px;
+  font-family: 'PT Sans', serif;
+  text-transform: uppercase;
+  letter-spacing: 20px;
+  top: 25%;
+  left: 15%;
+  position: absolute;
+}
+
+.sinistra {
+    position: fixed;
+    width: 20vw;
+    height: 99vh;
+    touch-action: none;
+}
+
+.destra {
+    position: fixed;
+    width: 20vw;
+    height: 99vh;
+    left: 80vw;
+    touch-action: none;
+}
