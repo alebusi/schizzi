@@ -1,14 +1,16 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Hexagon</title>
+    <title>Lettura Testo</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:700" rel="stylesheet">	
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400" rel="stylesheet">	
 </head>
 <body>
+  <textarea rows="1" name="testoCompleto" form="usrform" id="testoCompleto" ></textarea>
   <div id="testo">parola</div>
-  <div class="sinistra" ontouchstart="indietro" ontouchend="resetInt()"></div>
-  <div class="destra" ontouchstart="avanti" ontouchend="resetInt()"></div>
+  <!--<div class="sinistra" ontouchstart="indietro" ontouchend="resetInt()"></div>-->
+  <div id="velocita" onclick="cambioVelocita()"></div>
+  <div class="destra" ontouchstart="avanti()" ontouchend="resetInt()"></div>
   <script src="script.js"></script>
 </body>
 </html>
