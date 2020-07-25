@@ -1,8 +1,14 @@
 body {
-  background-color: #8F8F8F;
+  background-color: black;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10+ and Edge */
   user-select: none; /* Standard syntax */
+}
+
+#testoCompleto {
+  width: 30px;
+  color: white;
+  background-color: black;
 }
 
 #testo {
@@ -10,22 +16,33 @@ body {
   font-family: 'PT Sans', serif;
   text-transform: uppercase;
   letter-spacing: 20px;
+  color: white;
   top: 25%;
   left: 15%;
   position: absolute;
 }
-
+/*
 .sinistra {
     position: fixed;
     width: 20vw;
     height: 99vh;
     touch-action: none;
 }
-
+*/
 .destra {
     position: fixed;
     width: 20vw;
     height: 99vh;
     left: 80vw;
     touch-action: none;
+}
+
+#velocita {
+    position: fixed;
+    width: 25vw;
+    top: 70vh;
+    height: 30vh;
+    color: white;
+    font-size: 4vh;
+    padding-top: 13vh;
 }
