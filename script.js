@@ -1,3 +1,4 @@
+var testo="Radicalità per ricostruire È il titolo di un documento presentato oggi nella sede del Partito democratico da Gianni Cuperlo nel corso di un dibattito aperto che si è svolto in presenza, con non più di 40 persone per rispettare il distanziamento imposto dalle regole di contrasto al Covid, ma con molti collegamenti da remoto. Presidente della Fondazione Pd, ex deputato ed ex componente della segreteria con delega alle Riforme, è proprio sul riformismo di sinistra che Cuperlo punta l'accento. Riformismo che, a suo avviso, non può non essere "radicale", specie in questa fase storica e politica. Perché la radicalità delle idee è adeguata, in questo momento, alla situazione "estrema" che stiamo vivendo. Quello di Cuperlo non è un documento "contro", ma una proposta per dare vita a un percorso, coinvolgendo associazioni, enti, società civile e forze attive sul territorio per superare i correntismi e le divisioni ed evitare di sprecare la grande occasione del Recovery Fund";
 var tempo = 1200;
 var i=-1; //indice posizione nel testo
 var nc=0; //numero caratteri da visualizzare
@@ -22,10 +23,10 @@ function keyup_handler(event) {
 }
   
 function avanti() {
-    if (i == -1) {
+ /*   if (i == -1) {
        testo=document.getElementById("testoCompleto").value;
     }
-	
+*/	
     try {clearInterval(myTimer);}
        catch(err){}
   
