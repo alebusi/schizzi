@@ -19,6 +19,7 @@ function keypress_handler(event) {
 	this.kd = true;
         avanti();
     }
+  }
 }
 
 function keyup_handler(event) {
