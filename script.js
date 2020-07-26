@@ -3,6 +3,7 @@ var tempo = 1200;
 var i=-1; //indice posizione nel testo
 var nc=0; //numero caratteri da visualizzare
 var current_string="";
+kd = false;
 
 window.addEventListener("keydown", keypress_handler, false);
 window.addEventListener("keyup", keyup_handler, false);
@@ -13,13 +14,18 @@ $(document).ready(function(){
 */
 
 function keypress_handler(event) {
-  avanti();
+  if (event.keyCode == 32) { 
+    if (!this.kd) {
+	this.kd = true;
+        avanti();
+    }
 }
 
 function keyup_handler(event) {
-  a=1;
-  //alert("key-up");
-  //resetInt();
+  if (event.keyCode == 32) {
+     this.kd = false;
+     resetInt();
+  }
 }
   
 function avanti() {
