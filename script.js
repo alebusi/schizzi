@@ -20,7 +20,7 @@ $(document).ready(function(){
 function keypress_handler(event) {
   if (event.keyCode == 32) { 
     if (!this.kd) {
-	      this.kd = true;
+	this.kd = true;
         avanti();
     }
   }
@@ -36,7 +36,7 @@ function keyup_handler(event) {
 function avanti() {
     if (i == -1) {
      testoRaw=document.getElementById("testoCompleto").innerHTML;
-     testo=testoRaw.slice(indexOf("#"));	    
+     testo=testoRaw.substr(testoRaw.indexOf("#")+1);	    
     }	
     try {clearInterval(myTimer);}
        catch(err){}
