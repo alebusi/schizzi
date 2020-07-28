@@ -1,12 +1,12 @@
 var testo="";
 
 var dimensione = ["40","60","80","100","120"];
-var num_car = ["28","24","20","14","12"];
+var num_car = ["28","20","12","10","8"];
 var ind=0; 
 var tempo = 1200;
 var i=-1; //indice posizione nel testo
 var nc=0; //numero caratteri da visualizzare
-var nc_max=24; //numero massimo caratteri da visualizzare
+var nc_max=28; //numero massimo caratteri da visualizzare
 var current_string="";
 kd = false;
 
