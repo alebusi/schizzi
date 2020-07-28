@@ -1,5 +1,6 @@
 body {
   background-color: black;
+  font-family: 'Source Code Pro', monospace, serif;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10+ and Edge */
   user-select: none; /* Standard syntax */
@@ -12,14 +13,31 @@ body {
 }
 
 #testo {
-  font-size: 120px;
-  font-family: 'PT Sans', serif;
+  font-size: 40px;
   text-transform: uppercase;
-  letter-spacing: 20px;
+  letter-spacing: 4px;
   color: white;
   top: 25%;
   left: 15%;
   position: absolute;
+  -ms-transform: translate(0, -50%);
+  transform: translate(0, -50%);
+  background-color: green;
+}
+
+#inizio, #fine {
+  width: 40px;
+  height: 40px;
+  top: 25%;
+  left: 15%;
+  -ms-transform: translate(-110%, -50%);
+  transform: translate(-110%, -50%);
+  position: absolute;
+  background-color: #ff3300;
+}
+
+#fine {
+  transform: translate(800px, -50%);
 }
 /*
 .sinistra {
