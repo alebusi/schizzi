@@ -33,13 +33,13 @@ body {
   top: 25%;
   left: 15%;
   -ms-transform: translate(-110%, -50%);
-  transform: translate(-110%, -50%);
+  transform: translate(-60px, -50%);
   position: absolute;
   background-color: #ff3300;
 }
 
 #fine {
-  transform: translate(800px, -50%);
+  transform: translate(788px, -50%);
 }
 /*
 .sinistra {
