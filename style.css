@@ -7,9 +7,12 @@ body {
 }
 
 #testoCompleto {
-  width: 30px;
+  width: 90vw;
   color: white;
+  font-size: 3px;
   background-color: black;
+  position: fixed;
+  opacity: 0;
 }
 
 #testo {
@@ -36,7 +39,7 @@ body {
 }
 
 #fine {
-  transform: translate(758px, -50%);
+  transform: translate(800px, -50%);
 }
 /*
 .sinistra {
