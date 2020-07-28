@@ -35,7 +35,7 @@ function keyup_handler(event) {
   
 function avanti() {
     if (i == -1) {
-     testo=document.getElementById("testoCompleto").value;
+     testo=document.getElementById("testoCompleto").innerHTML;
     }	
     try {clearInterval(myTimer);}
        catch(err){}
