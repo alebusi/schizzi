@@ -12,16 +12,11 @@ kd = false;
 
 window.addEventListener("keydown", keypress_handler, false);
 window.addEventListener("keyup", keyup_handler, false);
-/*
-$(document).ready(function(){
-    $("#testoCompleto").load("https://docs.google.com/document/d/e/2PACX-1vTYZ7j14zvmea0tzkWS8wdm54-6gxHFMuATwkWe7xBjW_KvD8zOrKGVpErNOLbkV4d5jEzphBLLWT-u/pub");
-});
-*/
 
 function keypress_handler(event) {
   if (event.keyCode == 32) { 
     if (!this.kd) {
-	this.kd = true;
+	      this.kd = true;
         avanti();
     }
   }
@@ -49,7 +44,7 @@ function avanti() {
          r_t = testo[i];
          current_string = current_string.concat(r_t);
          document.getElementById("testo").innerHTML = current_string;
-         if (nc > nc_max) {
+         if (nc > nc_max-1) {
            current_string=""; 
            nc=0;
          }
