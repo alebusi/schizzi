@@ -1,7 +1,7 @@
 var testo="";
 
 var dimensione = ["40","60","80","100","120"];
-var num_car = ["28","19","14","12","10"];
+var num_car = ["28","19","15","12","10"];
 var ind=0; 
 var tempo = 1200;
 var i=-1; //indice posizione nel testo
