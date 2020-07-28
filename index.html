@@ -4,9 +4,12 @@
     <title>Lettura Testo</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400" rel="stylesheet">	
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div id="testo">parola</div>
+  <div id="inizio"></div>
+  <div id="testo" class="vuoto">parola</div>
+  <div id="fine"></div>
   <div id="velocita" onclick="cambioVelocita()">1200</div>
   <div id="dimensione" onclick="cambioDimensione()">40</div>
   <div class="destra" ontouchstart="avanti()" ontouchend="resetInt()"></div>
