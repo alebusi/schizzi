@@ -1,17 +1,21 @@
 var testo="Radicalità per ricostruire È il titolo di un documento presentato oggi nella sede del Partito democratico da Gianni Cuperlo nel corso di un dibattito aperto che si è svolto in presenza, con non più di 40 persone per rispettare il distanziamento imposto dalle regole di contrasto al Covid, ma con molti collegamenti da remoto. Presidente della Fondazione Pd, ex deputato ed ex componente della segreteria con delega alle Riforme, è proprio sul riformismo di sinistra che Cuperlo punta l'accento. Riformismo che, a suo avviso, non può non essere radicale, specie in questa fase storica e politica. Perché la radicalità delle idee è adeguata, in questo momento, alla situazione estrema che stiamo vivendo";
 
 var dimensione = ["40","60","80","100","120"];
-var num_car = ["24","20","16","14","12"];
+var num_car = ["20","18","16","14","12"];
 var ind=0; 
 var tempo = 1200;
 var i=-1; //indice posizione nel testo
 var nc=0; //numero caratteri da visualizzare
-var nc_max=24; //numero massimo caratteri da visualizzare
+var nc_max=12; //numero massimo caratteri da visualizzare
 var current_string="";
 kd = false;
 
 window.addEventListener("keydown", keypress_handler, false);
 window.addEventListener("keyup", keyup_handler, false);
+
+$(document).ready(function(){
+    $("#testoCompleto").load("https://docs.google.com/document/d/e/2PACX-1vRDihSpthOhnhcIbIi7Z1OfArt2KtozYcXuglANaXJk-xDDWgN9AXM6go_HFLoCaufZjWZV5EEKpq_P/pub span");
+});
 
 function keypress_handler(event) {
   if (event.keyCode == 32) { 
@@ -30,10 +34,9 @@ function keyup_handler(event) {
 }
   
 function avanti() {
- /*   if (i == -1) {
-       testo=document.getElementById("testoCompleto").value;
-    }
-*/	
+    if (i == -1) {
+     testo=document.getElementById("testoCompleto").value;
+    }	
     try {clearInterval(myTimer);}
        catch(err){}
   
@@ -43,6 +46,7 @@ function avanti() {
          nc+=1;
          r_t = testo[i];
          current_string = current_string.concat(r_t);
+         alert("testo "+current_string);
          document.getElementById("testo").innerHTML = current_string;
          if (nc > nc_max-1) {
            current_string=""; 
