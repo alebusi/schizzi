@@ -35,7 +35,8 @@ function keyup_handler(event) {
   
 function avanti() {
     if (i == -1) {
-     testo=document.getElementById("testoCompleto").innerHTML;
+     testoRaw=document.getElementById("testoCompleto").innerHTML;
+     testo=testoRaw.slice(indexOf("#"));	    
     }	
     try {clearInterval(myTimer);}
        catch(err){}
@@ -43,10 +44,10 @@ function avanti() {
     myTimer = setInterval(function() {
        if (i < testo.length-1) {
          i+=1;
-         nc+=1;
          r_t = testo[i];
          current_string = current_string.concat(r_t);
          document.getElementById("testo").innerHTML = current_string;
+	 nc+=1;
          if (nc > nc_max-1) {
            current_string=""; 
            nc=0;
