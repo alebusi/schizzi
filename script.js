@@ -46,7 +46,6 @@ function avanti() {
          nc+=1;
          r_t = testo[i];
          current_string = current_string.concat(r_t);
-         alert("testo "+current_string);
          document.getElementById("testo").innerHTML = current_string;
          if (nc > nc_max-1) {
            current_string=""; 
