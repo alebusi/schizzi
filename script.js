@@ -80,10 +80,13 @@ function cambioDimensione() {
 
 function cambioCase() {
     if (document.getElementById("case").style.textTransform == "lowercase") {
-	 document.getElementById("case").style.textTransform = "uppercase"; 
+	 document.getElementById("case").style.textTransform = "uppercase";
+	 document.getElementById("testo").style.textTransform = "uppercase"; 
+    }
     }
     else {
 	 document.getElementById("case").style.textTransform = "lowercase";
+	 document.getElementById("testo").style.textTransform = "lowercase";
     }
 }
 
