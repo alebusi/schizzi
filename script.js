@@ -77,3 +77,13 @@ function cambioDimensione() {
   document.getElementById("dimensione").innerHTML = dimensione[ind];
   nc_max=num_car[ind];
 }
+
+function cambioCase() {
+    if (document.getElementById("case").style.textTransform == "lowercase") {
+	 document.getElementById("case").style.textTransform = "uppercase"; 
+    }
+    else {
+	 document.getElementById("case").style.textTransform = "lowercase";
+    }
+}
+
