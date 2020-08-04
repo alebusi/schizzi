@@ -45,7 +45,12 @@ function avanti() {
        if (i < testo.length-1) {
          i+=1;
          r_t = testo[i];
-         current_string = current_string.concat(r_t);
+	 if (r_t == chr(32)) {
+	    current_string = current_string.concat('<span style="color:black;">-</span>'); 
+	 }
+	 else {
+            current_string = current_string.concat(r_t);
+	 }
          document.getElementById("testo").innerHTML = current_string;
 	 nc+=1;
          if (nc > nc_max-1) {
