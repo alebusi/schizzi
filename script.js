@@ -45,7 +45,7 @@ function avanti() {
        if (i < testo.length-1) {
          i+=1;
          r_t = testo[i];
-	 if (r_t == chr(32)) {
+	 if (r_t == " ") {
 	    current_string = current_string.concat('<span style="color:black;">-</span>'); 
 	 }
 	 else {
