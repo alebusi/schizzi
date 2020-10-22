@@ -40,18 +40,19 @@ function avanti() {
      testoRaw=document.getElementById("testoCompleto").innerHTML;
      testo=testoRaw.substr(testoRaw.indexOf("#")+1);	    
     }	
+    if (i < testo.length-1) {
        while (nc < nc_max) {
-       if (i < testo.length-1) {
          i+=1;
          r_t = testo[i];
 	 ind_c+=1;
 	 if (ind_c > colori.length-1) ind_c=0; 
 	 current_string = current_string.concat('<span style="color:'+colori[ind_c]+';">'+r_t+'-</span>'); 
 	 nc+=1;
-       }
+         }
        document.getElementById("testo").innerHTML = current_string;
        current_string=""; 
        nc=0;
+    }
 }
 
 function cambioVelocita() {
