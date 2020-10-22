@@ -2,7 +2,7 @@ var testo="";
 
 var dimensione = ["40","60","80","100","120"];
 var num_car = ["28","19","15","12","10"];
-var colori = ["red","yellow","orange"];
+var colori = ["white","orange","#ff3300"];
 var ind=0; 
 var ind_c=0;
 var tempo = 1200;
@@ -44,6 +44,8 @@ function avanti() {
        if (i < testo.length-1) {
          i+=1;
          r_t = testo[i];
+	 ind_c+=1;
+	 if (ind_c > colori.length-1) ind_c=0; 
 	 current_string = current_string.concat('<span style="color:'+colori[ind_c]+';">'+r_t+'-</span>'); 
 	 nc+=1;
        }
