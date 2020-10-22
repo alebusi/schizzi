@@ -2,14 +2,15 @@ var testo="";
 
 var dimensione = ["40","60","80","100","120"];
 var num_car = ["28","19","15","12","10"];
+var colori = ["red","yellow","orange"];
 var ind=0; 
+var ind_c=0;
 var tempo = 1200;
 var i=-1; //indice posizione nel testo
 var nc=0; //numero caratteri da visualizzare
 var nc_max=28; //numero massimo caratteri da visualizzare
 var current_string="";
 kd = false;
-up = false;
 
 window.addEventListener("keydown", keypress_handler, false);
 window.addEventListener("keyup", keyup_handler, false);
@@ -24,18 +25,12 @@ function keypress_handler(event) {
 	this.kd = true;
         avanti();
     }
-    elsif (this.up) {
-	this.kd = false;
-        resetInt();
-    }
   }
 }
 
 function keyup_handler(event) {
   if (event.keyCode == 32) {
-     if (this.
      this.kd = false;
-     this.up = true;
      /* resetInt(); */
   }
 }
@@ -45,34 +40,16 @@ function avanti() {
      testoRaw=document.getElementById("testoCompleto").innerHTML;
      testo=testoRaw.substr(testoRaw.indexOf("#")+1);	    
     }	
-    try {clearInterval(myTimer);}
-       catch(err){}
-  
-    myTimer = setInterval(function() {
+       while (nc < nc_max) {
        if (i < testo.length-1) {
          i+=1;
          r_t = testo[i];
-	 if (r_t == " ") {
-	    current_string = current_string.concat('<span style="color:black;">-</span>'); 
-	 }
-	 else {
-            current_string = current_string.concat(r_t);
-	 }
-	 //current_string = current_string.concat('<span style="color:'+color[ind_c]+';">'+r_t+'-</span>'); 
-         document.getElementById("testo").innerHTML = current_string;
+	 current_string = current_string.concat('<span style="color:'+colori[ind_c]+';">'+r_t+'-</span>'); 
 	 nc+=1;
-         if (nc > nc_max-1) {
-           current_string=""; 
-           nc=0;
-         }
        }
-       //resetInt();
-	  }, tempo);
-}
-
-function resetInt() {
-    try {clearInterval(myTimer);}
-		catch(err){}
+       document.getElementById("testo").innerHTML = current_string;
+       current_string=""; 
+       nc=0;
 }
 
 function cambioVelocita() {
