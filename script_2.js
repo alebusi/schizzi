@@ -46,7 +46,7 @@ function avanti() {
          r_t = testo[i];
 	 ind_c+=1;
 	 if (ind_c > colori.length-1) ind_c=0; 
-	 current_string = current_string.concat('<span style="color:'+colori[ind_c]+';">'+r_t+'-</span>'); 
+	 current_string = current_string.concat('<span style="color:'+colori[ind_c]+';">'+r_t+'</span>'); 
 	 nc+=1;
          }
        document.getElementById("testo").innerHTML = current_string;
