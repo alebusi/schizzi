@@ -43,6 +43,11 @@ function keyup_handler(event) {
   }
 }
 
+function resetInt() {
+    try {clearInterval(myTimer);}
+		catch(err){}
+}
+
 function elaboraTesto() {
     if (i == -1) {
      testoRaw=document.getElementById("testoCompleto").innerHTML;
@@ -57,9 +62,7 @@ function elaboraTesto() {
         nc=0;
     }
     else {
-       try {clearInterval(myTimer);}
-       catch(err){} 
-
+       resetInt();
        myTimer = setInterval(avanti, tempo);
     }
 }
