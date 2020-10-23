@@ -15,7 +15,7 @@ var monocolore = false;
 var kd = false;
 
 window.addEventListener("keydown", keypress_handler, false);
-window.addEventListener("keyup", keyup_handler, false);
+//window.addEventListener("keyup", keyup_handler, false);
 
 $(document).ready(function(){
     $("#testoCompleto").load("https://docs.google.com/document/d/e/2PACX-1vRDihSpthOhnhcIbIi7Z1OfArt2KtozYcXuglANaXJk-xDDWgN9AXM6go_HFLoCaufZjWZV5EEKpq_P/pub span");
@@ -25,8 +25,14 @@ function keypress_handler(event) {
   if (event.keyCode == 32) { 
     if (!this.kd) {  //false
 	this.kd = true;
-        avanti();
+        elaboraTesto();
     }
+    else {
+	if (tempo > 0) {
+	   resetInt();
+	}
+	this.kd = false;
+    }  
   }
 }
 
@@ -36,41 +42,50 @@ function keyup_handler(event) {
      /* resetInt(); */
   }
 }
-  
-function avanti() {
+
+function elaboraTesto() {
     if (i == -1) {
      testoRaw=document.getElementById("testoCompleto").innerHTML;
      testo=testoRaw.substr(testoRaw.indexOf("#")+1);	    
-    }	
+    }
+    if (tempo == 0) {
+	while (nc < nc_max) {
+	  avanti();
+	}
+	document.getElementById("testo").innerHTML = current_string;
+	current_string=""; 
+        nc=0;
+    }
+    else {
+       try {clearInterval(myTimer);}
+       catch(err){} 
+
+       myTimer = setInterval(avanti, tempo);
+    }
+}
+	    
+function avanti() {
     if (i < testo.length-1) {
-       while (nc < nc_max) {
          i+=1;
          r_t = testo[i];
 	 ind_c+=1;
 	 if (ind_c > colori.length-1 || monocolore) ind_c=0; 
-	 if (tempo > 0) {
-	    current_string = current_string.concat(r_t);
-	 }
-	 else {		 
-	    current_string = current_string.concat('<span style="color:'+colori[ind_c]+';">'+r_t+'</span>');
-	 }
+	 current_string = current_string.concat('<span style="color:'+colori[ind_c]+';">'+r_t+'</span>');
 	 nc+=1;
-       }
-       if (tempo > 0) {
-	  var myVar = setInterval(visChar(current_string), tempo);
-       }
-       else {
-          document.getElementById("testo").innerHTML = current_string;
-       }
-       current_string=""; 
-       nc=0;
+	 if (tempo > 0) {
+             document.getElementById("testo").innerHTML = current_string;
+	     if (nc > nc_max-1) {
+                current_string=""; 
+                nc=0;
+	     }
+         }
     }
 }
 
 function visChar(testo) {
 	i_pos+=1;
 	if (i_pos > testo.length -1) {
-	   clearInterval(myVar);
+	   //clearInterval(myVar);
 	   i_pos=-1;
 	}
 	else {
