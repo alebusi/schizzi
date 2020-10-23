@@ -69,7 +69,7 @@ body {
     touch-action: none;
 }
 
-#velocita, #dimensione, #case {
+#velocita, #dimensione, #case, #monocolore {
     position: fixed;
     top: 70vh;
     width: 25vw;
@@ -86,4 +86,8 @@ body {
 
 #case {
     left: 50vw;
+}
+
+#monocolore {
+    left: 75vw;
 }
