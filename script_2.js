@@ -22,17 +22,20 @@ $(document).ready(function(){
 });
 
 function keypress_handler(event) {
-  if (event.keyCode == 32) { 
-    if (!this.kd) {  //false
-	this.kd = true;
-        elaboraTesto();
-    }
-    else {
-	if (tempo > 0) {
-	   resetInt();
+  if (event.keyCode == 32) {
+     if (tempo == 0) {
+	elaboraTesto();
+     }
+     if (tempo > 0) {
+	if (!this.kd) {  //false
+	   this.kd = true;
+           elaboraTesto();
 	}
-	this.kd = false;
-    }  
+        else {
+	   resetInt();
+	   this.kd = false;
+	}
+     }  
   }
 }
 
