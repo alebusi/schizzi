@@ -10,7 +10,8 @@ var i=-1; //indice posizione nel testo
 var nc=0; //numero caratteri da visualizzare
 var nc_max=28; //numero massimo caratteri da visualizzare
 var current_string="";
-kd = false;
+var monocolore = false;
+var kd = false;
 
 window.addEventListener("keydown", keypress_handler, false);
 window.addEventListener("keyup", keyup_handler, false);
@@ -45,20 +46,28 @@ function avanti() {
          i+=1;
          r_t = testo[i];
 	 ind_c+=1;
-	 if (ind_c > colori.length-1) ind_c=0; 
-	 current_string = current_string.concat('<span style="color:'+colori[ind_c]+';">'+r_t+'</span>'); 
+	 if (ind_c > colori.length-1 || monocolore) ind_c=0; 
+	 current_string = current_string.concat('<span style="color:'+colori[ind_c]+';">'+r_t+'</span>');
 	 nc+=1;
+	 if (tempo > 0) {
+	    setTimeout(function(){ document.getElementById("testo").innerHTML = current_string; }, tempo);	 
          }
-       document.getElementById("testo").innerHTML = current_string;
+       }
+       if (tempo == 0) {
+         document.getElementById("testo").innerHTML = current_string;
+       }
        current_string=""; 
        nc=0;
     }
 }
 
 function cambioVelocita() {
+  if (tempo == 0) {
+	tempo = 1300;
+  }
   tempo -= 100;
   if (tempo < 500) {
-    tempo=1200;
+    tempo=0;
   }
   document.getElementById("velocita").innerHTML = tempo;
 }
@@ -80,4 +89,14 @@ function cambioCase() {
 	 document.getElementById("case").style.textTransform = "lowercase";
 	 document.getElementById("testo").style.textTransform = "lowercase";
     }
+}
+function cambioColore() {
+  if (monocolore) {
+     monocolore=false;
+     document.getElementById("monocolore").innerHTML = "COL";
+  }
+  else {
+     monocolore=true;
+     document.getElementById("monocolore").innerHTML = "BIA";
+  }
 }
