@@ -76,27 +76,22 @@ function avanti() {
          r_t = testo[i];
 	 ind_c+=1;
 	 if (ind_c > colori.length-1 || monocolore) ind_c=0; 
-	 current_string = current_string.concat('<span style="color:'+colori[ind_c]+';">'+r_t+'</span>');
+	 if (r_t == " ") {
+	    current_string = current_string.concat('<span style="color:black;">-</span>'); 
+	 }
+	 else {
+	    current_string = current_string.concat('<span style="color:'+colori[ind_c]+';">'+r_t+'</span>');
+	 }
 	 nc+=1;
 	 if (tempo > 0) {
              document.getElementById("testo").innerHTML = current_string;
 	     if (nc > nc_max-1) {
+		document.getElementById("testo").style.borderRightColor = "white";
                 current_string=""; 
                 nc=0;
 	     }
          }
     }
-}
-
-function visChar(testo) {
-	i_pos+=1;
-	if (i_pos > testo.length -1) {
-	   //clearInterval(myVar);
-	   i_pos=-1;
-	}
-	else {
-	   document.getElementById("testo").innerHTML = testo.substring(i, 1);
-	}
 }
 
 function cambioVelocita() {
