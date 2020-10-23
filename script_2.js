@@ -72,6 +72,7 @@ function elaboraTesto() {
 	    
 function avanti() {
     if (i < testo.length-1) {
+	 document.getElementById("testo").style.borderRightColor = "#4285F4";
          i+=1;
          r_t = testo[i];
 	 ind_c+=1;
