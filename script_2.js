@@ -5,6 +5,7 @@ var num_car = ["28","19","15","12","10"];
 var colori = ["white","orange","#ff3300"];
 var ind=0; 
 var ind_c=0;
+var i_pos=-1;
 var tempo = 1200;
 var i=-1; //indice posizione nel testo
 var nc=0; //numero caratteri da visualizzare
@@ -51,7 +52,7 @@ function avanti() {
 	 nc+=1;
        }
        if (tempo > 0) {
-	  var myVar = setInterval(function(){ document.getElementById("testo").innerHTML = current_string; }, tempo);
+	  var myVar = setInterval(visChar(current_string), tempo);
        }
        else {
           document.getElementById("testo").innerHTML = current_string;
@@ -62,10 +63,10 @@ function avanti() {
 }
 
 function visChar(testo) {
-	i+=1;
-	if (i > testo.length -1) {
+	i_pos+=1;
+	if (i_pos > testo.length -1) {
 	   clearInterval(myVar);
-	   i=0;
+	   i_pos=-1;
 	}
 	else {
 	   document.getElementById("testo").innerHTML = str.testo(i, 1);
