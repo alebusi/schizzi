@@ -49,16 +49,27 @@ function avanti() {
 	 if (ind_c > colori.length-1 || monocolore) ind_c=0; 
 	 current_string = current_string.concat('<span style="color:'+colori[ind_c]+';">'+r_t+'</span>');
 	 nc+=1;
-	 if (tempo > 0) {
-	    setTimeout(function(){ document.getElementById("testo").innerHTML = current_string; }, tempo);	 
-         }
        }
-       if (tempo == 0) {
-         document.getElementById("testo").innerHTML = current_string;
+       if (tempo > 0) {
+	  var myVar = setInterval(function(){ document.getElementById("testo").innerHTML = current_string; }, tempo);
+       }
+       else {
+          document.getElementById("testo").innerHTML = current_string;
        }
        current_string=""; 
        nc=0;
     }
+}
+
+function visChar(testo) {
+	i+=1;
+	if (i > testo.length -1) {
+	   clearInterval(myVar);
+	   i=0;
+	}
+	else {
+	   document.getElementById("testo").innerHTML = str.testo(i, 1);
+	}
 }
 
 function cambioVelocita() {
