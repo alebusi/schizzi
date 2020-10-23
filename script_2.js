@@ -65,8 +65,14 @@ function elaboraTesto() {
         nc=0;
     }
     else {
-       resetInt();
-       myTimer = setInterval(avanti, tempo);
+       if (this.kd) {	       
+          resetInt();
+	  this.kd = false;
+       }
+       else {
+          myTimer = setInterval(avanti, tempo);
+	  this.kd = true;
+       }
     }
 }
 	    
