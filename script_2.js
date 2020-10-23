@@ -69,7 +69,7 @@ function visChar(testo) {
 	   i_pos=-1;
 	}
 	else {
-	   document.getElementById("testo").innerHTML = str.testo(i, 1);
+	   document.getElementById("testo").innerHTML = testo.substring(i, 1);
 	}
 }
 
