@@ -31,6 +31,8 @@ body {
   text-transform: uppercase;
   letter-spacing: 4px;
   color: white;
+  border-right: solid 10px blue;
+  padding-right: 100px;
   top: 25%;
   left: 15%;
   position: absolute;
