@@ -48,7 +48,12 @@ function avanti() {
          r_t = testo[i];
 	 ind_c+=1;
 	 if (ind_c > colori.length-1 || monocolore) ind_c=0; 
-	 current_string = current_string.concat('<span style="color:'+colori[ind_c]+';">'+r_t+'</span>');
+	 if (tempo > 0) {
+	    current_string = current_string.concat(r_t);
+	 }
+	 else {		 
+	    current_string = current_string.concat('<span style="color:'+colori[ind_c]+';">'+r_t+'</span>');
+	 }
 	 nc+=1;
        }
        if (tempo > 0) {
