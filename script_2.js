@@ -2,7 +2,7 @@ var testo="";
 
 var dimensione = ["40","60","80","100","120"];
 var num_car = ["28","19","15","12","10"];
-var colori = ["white","orange","#ff3300"];
+var colori = ["white","orange"];
 var ind=0; 
 var ind_c=0;
 var i_pos=-1;
