@@ -78,6 +78,9 @@ function elaboraTesto() {
 	    
 function avanti() {
     if (i < testo.length-1) {
+      if (nc < 0) { //giro a vuoto
+	 nc = 0;
+      } else {
 	 document.getElementById("testo").style.borderRightColor = "#4285F4";
          i+=1;
          r_t = testo[i];
@@ -95,9 +98,10 @@ function avanti() {
 	     if (nc > nc_max-1) {
 		document.getElementById("testo").style.borderRightColor = "white";
                 current_string=""; 
-                nc=0;
+                nc=-1;
 	     }
          }
+      }
     }
 }
 
