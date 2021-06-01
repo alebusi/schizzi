@@ -1,19 +1,11 @@
 body {
   background-color: black;
   font-family: 'Source Code Pro', monospace, serif;
+  font-size: 1px;
+  opacity: 0;
   -webkit-user-select: none; /* Safari */
   -ms-user-select: none; /* IE 10+ and Edge */
   user-select: none; /* Standard syntax */
-}
-
-#testoCompleto {
-  font-size: 1px;
-  color: white;
-  opacity: 0;
-}
-
-#logo {
-  color: white;
 }
 
 #vedi {
@@ -26,9 +18,9 @@ body {
 svg {
     display: inline-block;
     background-color: black;
-    margin: 20 px;
-    width: 400px;
-    height: 400px;
+    margin: 60px;
+    width: 360px;
+    height: 360px;
 }
 
 path {
