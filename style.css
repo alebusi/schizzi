@@ -6,6 +6,15 @@ body {
   user-select: none; /* Standard syntax */
 }
 
+#testoCompleto {
+  width: 90vw;
+  color: white;
+  font-size: 3px;
+  background-color: black;
+  position: fixed;
+  opacity: 0;
+}
+
 svg {
     display: inline-block;
     background-color: black;
