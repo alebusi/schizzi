@@ -6,8 +6,7 @@ function elaboraTesto() {
   testo=document.getElementById("testoCompleto").innerHTML;
   testo=testo.replace(/&lt;/g,"<");
   testo=testo.replace(/&gt;/g,">");
-  testo=testo.replace(/  /g," ");
-  testo=testo.replace(/  /g," ");
+  testo=testo.replace(/\s+/g," ");
   document.getElementById("logo").innerHTML = testo;
 }
 
