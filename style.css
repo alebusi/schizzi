@@ -8,6 +8,11 @@ body {
   user-select: none; /* Standard syntax */
 }
 
+#publish-banner-icon {
+  width: 0px;
+  height: 0px;
+}
+
 #vedi {
   width: 10vw;
   height: 10vh;
