@@ -22,6 +22,7 @@ function randomColor() {
 function assColore() {
     for (ix = 0; ix < 10; ix++) {
       document.getElementById("i"+ix).style.fill = randomColor();
+    }
 }
 
 function myFunc() {
