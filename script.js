@@ -21,7 +21,9 @@ function randomColor() {
 
 function assColore() {
     for (ix = 0; ix < 10; ix++) {
-      document.getElementById("i"+ix).style.fill = randomColor();
+      if (document.getElementById("i"+ix)) {
+         document.getElementById("i"+ix).style.fill = randomColor();
+      }
     }
 }
 
