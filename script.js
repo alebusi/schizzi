@@ -10,6 +10,20 @@ function elaboraTesto() {
   document.getElementById("logo").innerHTML = testo;
 }
 
+function randomColor() {
+    var hex = '0123456789ABC'.split('');
+    var color = '#';
+    for (i = 0; i < 6; i++) {
+        color = color + hex[Math.floor(Math.random() * 13)];
+    }
+    return color;
+}
+
+function assColore() {
+    for (ix = 0; ix < 10; ix++) {
+      document.getElementById("i"+ix).style.fill = randomColor();
+}
+
 function myFunc() {
   a=1; //funzione fittizia per far scattare hover su disp.touch
 }
