@@ -21,6 +21,15 @@ body {
   position: fixed;
 }
 
+#btColore {
+  width: 60px;
+  height: 60px;
+  left: 90vw;
+  top: 10vh;
+  background-color: red;
+  position: fixed;
+}
+
 svg {
     display: inline-block;
     background-color: black;
