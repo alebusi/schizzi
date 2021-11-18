@@ -21,10 +21,22 @@ function randomColor() {
 
 function assColore() {
     for (ix = 0; ix < 10; ix++) {
+        x = document.getElementsByClassName("i"+ix);
+        if (x.length > 0) {
+            colore=randomColor();
+            for (i = 0; i < x.length; i++) {
+               x[i].style.fill = colore;
+            }
+        }
+    }
+    //x = document.getElementsByClassName("
+    //var x = document.getElementsByTagName("path");
+    /*for (ix = 0; ix < 10;x = document.getElementsByClassName("cl"+ix);
+         ix++) {
       if (document.getElementById("i"+ix)) {
          document.getElementById("i"+ix).style.fill = randomColor();
       }
-    }
+    }*/
 }
 
 function myFunc() {
