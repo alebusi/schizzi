@@ -1,5 +1,5 @@
-var colTraccia=["white","blue","red"];
-var y=0;
+var colori = ["white","blue","red"];
+var ind_r = 0;
 
 $(document).ready(function(){
     $("#testoCompleto").load("https://docs.google.com/document/d/e/2PACX-1vR2wy7N8nsgFMNHXOhIozb2PXqPEyEx0Xff6BXvgE6L2ywGaE0_NDZ46fjef7Z8sqSpMGvPgKQH1CZT/pub span");
@@ -42,6 +42,15 @@ function traccia() {
        x[ix].style.fill = colTraccia[y];
     }
 }
+
+function cambioRiempimento() {
+     ind_r+=1;
+     if (ind_r > colori.length-1) ind_r=0;
+     var x = document.getElementsByTagName("path");
+     for (i = 0; i < x.length; i++) {
+       x[i].style.fill = colori[ind_r];
+     }
+    }
 
 function myFunc() {
   a=1; //funzione fittizia per far scattare hover su disp.touch
