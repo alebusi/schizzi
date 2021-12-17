@@ -1,3 +1,6 @@
+var colTraccia=["white","blue","red"];
+var y=0;
+
 $(document).ready(function(){
     $("#testoCompleto").load("https://docs.google.com/document/d/e/2PACX-1vR2wy7N8nsgFMNHXOhIozb2PXqPEyEx0Xff6BXvgE6L2ywGaE0_NDZ46fjef7Z8sqSpMGvPgKQH1CZT/pub span");
 });
@@ -29,14 +32,15 @@ function assColore() {
             }
         }
     }
-    //x = document.getElementsByClassName("
-    //var x = document.getElementsByTagName("path");
-    /*for (ix = 0; ix < 10;x = document.getElementsByClassName("cl"+ix);
-         ix++) {
-      if (document.getElementById("i"+ix)) {
-         document.getElementById("i"+ix).style.fill = randomColor();
-      }
-    }*/
+}
+
+function traccia() {
+    var x = getElementsByTagName("svg");
+    y=y+1;
+    if (y > 2) y=0;
+    for (ix = 0; ix < x.length; ix++) {
+       x[ix].style.fill = colTraccia[y];
+    }
 }
 
 function myFunc() {
