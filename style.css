@@ -26,22 +26,43 @@ body {
   height: 60px;
   left: 90vw;
   top: 10vh;
-  background-color: red;
+  background-color: white;
+  opacity: 0.4;
+  position: fixed;
+}
+
+#btTraccia {
+  width: 60px;
+  height: 60px;
+  left: 90vw;
+  top: 18vh;
+  background-color: white;
+  opacity: 0.4;
+  position: fixed;
+}
+
+#btSfondo {
+  width: 60px;
+  height: 60px;
+  left: 90vw;
+  top: 26vh;
+  background-color: white;
+  opacity: 0.4;
   position: fixed;
 }
 
 svg {
     display: inline-block;
-    background-color: black;
+    background-color: transparent;
     margin: 40px;
     width: 360px;
     height: 360px;
+    stroke: white;
+    stroke-width: 1;
 }
 
 path {
     fill: black;
-    stroke: white;
-    stroke-width: 1;
 }
 
 path:hover {
