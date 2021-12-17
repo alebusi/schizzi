@@ -35,7 +35,7 @@ function assColore() {
 }
 
 function traccia() {
-    var x = getElementsByTagName("svg");
+    var x = document.getElementsByTagName("svg");
     y=y+1;
     if (y > 2) y=0;
     for (ix = 0; ix < x.length; ix++) {
