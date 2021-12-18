@@ -1,4 +1,4 @@
-var colori = ["white","blue","red"];
+var colori = ["white","black","transparent"];
 var ind_r = 0;
 
 $(document).ready(function(){
@@ -22,7 +22,7 @@ function randomColor() {
     return color;
 }
 
-function assColore() {
+function cambiaColore() {
     for (ix = 0; ix < 10; ix++) {
         x = document.getElementsByClassName("i"+ix);
         if (x.length > 0) {
@@ -34,23 +34,24 @@ function assColore() {
     }
 }
 
-function traccia() {
-    var x = document.getElementsByTagName("svg");
-    y=y+1;
-    if (y > 2) y=0;
-    for (ix = 0; ix < x.length; ix++) {
-       x[ix].style.fill = colTraccia[y];
-    }
-}
-
-function cambioRiempimento() {
+function cambiaTraccia() {
      ind_r+=1;
      if (ind_r > colori.length-1) ind_r=0;
-     var x = document.getElementsByTagName("path");
+     var x = document.getElementsByTagName("svg");
      for (i = 0; i < x.length; i++) {
-       x[i].style.fill = colori[ind_r];
+       x[i].style.stroke = colori[ind_r];
      }
     }
+
+function cambiaSfondo() {
+  if (document.body.style.backgroundColor == "black") {
+      newColor = randomColor();
+      document.body.style.backgroundColor=newColor;
+  }
+  else {
+    document.body.style.backgroundColor="black";
+  }
+}
 
 function myFunc() {
   a=1; //funzione fittizia per far scattare hover su disp.touch
